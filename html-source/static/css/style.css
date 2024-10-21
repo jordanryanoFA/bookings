@@ -1,0 +1,16 @@
+.my-footer {
+    background-color: #163b65;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    margin-top: 2em;
+}
+.navbar-brand, .nav-link {
+    color: white !important;
+}
+.notie-container {
+    box-shadow: none;
+}
+.datepicker {
+    z-index: 10000;
+}
