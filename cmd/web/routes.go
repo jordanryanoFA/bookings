@@ -3,8 +3,8 @@ package main
 import (
 	"net/http"
 
-	"github.com/jordanryanoFA/bookings/pkg/config"
-	"github.com/jordanryanoFA/bookings/pkg/handlers"
+	"github.com/jordanryanoFA/bookings/internal/config"
+	"github.com/jordanryanoFA/bookings/internal/handlers"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"

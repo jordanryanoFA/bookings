@@ -7,9 +7,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/jordanryanoFA/bookings/pkg/config"
-	"github.com/jordanryanoFA/bookings/pkg/models"
-	"github.com/jordanryanoFA/bookings/pkg/render"
+	"github.com/jordanryanoFA/bookings/internal/config"
+	"github.com/jordanryanoFA/bookings/internal/models"
+	"github.com/jordanryanoFA/bookings/internal/render"
 )
 
 // Repo the repository used by the handlers
