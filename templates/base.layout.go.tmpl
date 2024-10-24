@@ -102,6 +102,18 @@
             })
         }
 
+        {{with .Error}}
+            Notify("{{.}}", "error")
+        {{end}}
+
+        {{with .Flash}}
+        Notify("{{.}}", "success")
+        {{end}}
+
+        {{with .Warning}}
+        Notify("{{.}}", "warning")
+        {{end}}
+
 
         function Prompt() {
             let toast = function (c) {
