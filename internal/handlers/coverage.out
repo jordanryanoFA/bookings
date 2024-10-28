@@ -1,0 +1,22 @@
+mode: set
+github.com/jordanryanoFA/bookings/internal/handlers/handlers.go:25.47,29.2 1 1
+github.com/jordanryanoFA/bookings/internal/handlers/handlers.go:32.33,34.2 1 1
+github.com/jordanryanoFA/bookings/internal/handlers/handlers.go:37.67,42.2 3 1
+github.com/jordanryanoFA/bookings/internal/handlers/handlers.go:45.68,58.2 5 1
+github.com/jordanryanoFA/bookings/internal/handlers/handlers.go:61.74,70.2 4 1
+github.com/jordanryanoFA/bookings/internal/handlers/handlers.go:73.78,76.16 2 1
+github.com/jordanryanoFA/bookings/internal/handlers/handlers.go:76.16,79.3 2 0
+github.com/jordanryanoFA/bookings/internal/handlers/handlers.go:81.2,93.19 6 1
+github.com/jordanryanoFA/bookings/internal/handlers/handlers.go:93.19,101.3 4 0
+github.com/jordanryanoFA/bookings/internal/handlers/handlers.go:103.2,104.66 2 1
+github.com/jordanryanoFA/bookings/internal/handlers/handlers.go:108.71,110.2 1 1
+github.com/jordanryanoFA/bookings/internal/handlers/handlers.go:113.69,115.2 1 1
+github.com/jordanryanoFA/bookings/internal/handlers/handlers.go:118.75,120.2 1 1
+github.com/jordanryanoFA/bookings/internal/handlers/handlers.go:123.79,127.2 3 1
+github.com/jordanryanoFA/bookings/internal/handlers/handlers.go:135.79,142.16 3 1
+github.com/jordanryanoFA/bookings/internal/handlers/handlers.go:142.16,144.3 1 0
+github.com/jordanryanoFA/bookings/internal/handlers/handlers.go:145.2,146.14 2 1
+github.com/jordanryanoFA/bookings/internal/handlers/handlers.go:150.70,152.2 1 1
+github.com/jordanryanoFA/bookings/internal/handlers/handlers.go:155.81,157.9 2 1
+github.com/jordanryanoFA/bookings/internal/handlers/handlers.go:157.9,162.3 4 1
+github.com/jordanryanoFA/bookings/internal/handlers/handlers.go:164.2,171.4 4 0
