@@ -10,6 +10,7 @@ import (
 
 	"github.com/jordanryanoFA/bookings/internal/config"
 	"github.com/jordanryanoFA/bookings/internal/handlers"
+	"github.com/jordanryanoFA/bookings/internal/helpers"
 	"github.com/jordanryanoFA/bookings/internal/models"
 	"github.com/jordanryanoFA/bookings/internal/render"
 
@@ -75,8 +76,8 @@ func run() error {
 
 	repo := handlers.NewRepo(&app)
 	handlers.NewHandlers(repo)
-
 	render.NewTemplates(&app)
+	helpers.NewHelpers(&app)
 
 	return nil
 }
