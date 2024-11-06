@@ -177,8 +177,16 @@ func (m *Repository) PostAvailability(w http.ResponseWriter, r *http.Request) {
 		helpers.ServerError(w, err)
 		return
 	}
-	for _, i := range rooms {
-		m.App.InfoLog.Println("ROOM:", i.ID, i.RoomName)
+	// // print to the terminal
+	// for _, i := range rooms {
+	// 	m.App.InfoLog.Println("ROOM:", i.ID, i.RoomName)
+	// }
+
+	if len(rooms) == 0 {
+		// no availability
+		m.App.Session.Put(r.Context(), "error", "No Availability")
+		http.Redirect(w, r, "/search-availability", http.StatusSeeOther)
+		return
 	}
 	w.Write([]byte(fmt.Sprintf("start date is %s and end is %s", start, end)))
 }
