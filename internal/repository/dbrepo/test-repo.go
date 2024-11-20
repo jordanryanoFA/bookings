@@ -47,3 +47,17 @@ func (m *tesDBRepo) GetRoomByID(id int) (models.Room, error) {
 	}
 	return room, nil
 }
+
+func (m *tesDBRepo) GetUserByID(id int) (models.User, error) {
+	var u models.User
+
+	return u, nil
+}
+
+func (m *tesDBRepo) UpdateUser(u models.User) error {
+	return nil
+}
+
+func (m *tesDBRepo) Autenticate(email, testPassword string) (int, string, error) {
+	return 1, "", nil
+}
