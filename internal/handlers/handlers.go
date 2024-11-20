@@ -407,3 +407,7 @@ func (m *Repository) ShowLogin(w http.ResponseWriter, r *http.Request) {
 		Form: forms.New(nil),
 	})
 }
+
+func (m *Repository) PostShowLogin(w http.ResponseWriter, r *http.Request) {
+
+}
