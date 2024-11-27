@@ -66,3 +66,16 @@ func (m *tesDBRepo) AllReservation() ([]models.Reservation, error) {
 	var reservations []models.Reservation
 	return reservations, nil
 }
+
+// returns a slice of all reservations
+func (m *tesDBRepo) AllNewReservation() ([]models.Reservation, error) {
+	var reservations []models.Reservation
+
+	return reservations, nil
+}
+
+// returns one reservation by ID
+func (m *tesDBRepo) GetReservationByID(id int) (models.Reservation, error) {
+	var res models.Reservation
+	return res, nil
+}

@@ -1,0 +1,1 @@
+drop_coloumn("reservations", "processed")
