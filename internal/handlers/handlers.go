@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/http"
 	"strconv"
+	"strings"
 	"time"
 
 	"github.com/go-chi/chi/v5"
@@ -492,6 +493,13 @@ func (m *Repository) AdminNewReservations(w http.ResponseWriter, r *http.Request
 
 // show the reservation in the admin tool
 func (m *Repository) AdminShowReservations(w http.ResponseWriter, r *http.Request) {
+	exploded := strings.Split(r.RequestURI, "/")
+	id, err := strconv.Atoi(exploded[4])
+	if err != nil {
+		helpers.ServerError(w, err)
+		return
+	}
+	log.Println(id)
 	// get reservations from the databases
 	render.Template(w, r, "admin-reservations-show.go.tmpl", &models.TemplateData{})
 }
