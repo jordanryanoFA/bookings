@@ -499,9 +499,26 @@ func (m *Repository) AdminShowReservations(w http.ResponseWriter, r *http.Reques
 		helpers.ServerError(w, err)
 		return
 	}
-	log.Println(id)
+	// log.Println(id)
+	src := exploded[3]
+
+	stringMap := make(map[string]string)
+	stringMap["src"] = src
+
 	// get reservations from the databases
-	render.Template(w, r, "admin-reservations-show.go.tmpl", &models.TemplateData{})
+	res, err := m.DB.GetReservationByID(id)
+	if err != nil {
+		helpers.ServerError(w, err)
+		return
+	}
+	data := make(map[string]interface{})
+	data["reservation"] = res
+
+	render.Template(w, r, "admin-reservations-show.go.tmpl", &models.TemplateData{
+		StringMap: stringMap,
+		Data:      data,
+		Form:      forms.New(nil),
+	})
 }
 
 // shows reservations calendar

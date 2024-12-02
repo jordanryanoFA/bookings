@@ -269,7 +269,7 @@ func (m *postgresDBRepo) AllNewReservation() ([]models.Reservation, error) {
 	var reservations []models.Reservation
 
 	query := `select r.id, r.first_name, r.last_name, r.email, r.phone, r.start_date, 
-	r.end_date, r.room_id, r.created_at, r.updated_at, 
+	r.end_date, r.room_id, r.created_at, r.updated_at,
 	rm.id, rm.room_name 
 	from reservations r
 	left join rooms rm on (r.room_id = rm.id)
@@ -315,14 +315,17 @@ func (m *postgresDBRepo) GetReservationByID(id int) (models.Reservation, error) 
 
 	var res models.Reservation
 
-	query := `select r.id, r.first_name, r.last_name, r.email, r.phone, r.start_date, 
+	query := `
+	select r.id, r.first_name, r.last_name, r.email, r.phone, r.start_date, 
 	r.end_date, r.room_id, r.created_at, r.updated_at, r.processed,
 	rm.id, rm.room_name 
 	from reservations r
 	left join rooms rm on (r.room_id = rm.id)
-	where processed = $1`
+	where r.id = $1
+	`
 
 	row := m.DB.QueryRowContext(ctx, query, id)
+
 	err := row.Scan(
 		&res.ID,
 		&res.FirstName,
