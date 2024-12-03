@@ -79,3 +79,18 @@ func (m *tesDBRepo) GetReservationByID(id int) (models.Reservation, error) {
 	var res models.Reservation
 	return res, nil
 }
+
+// UpdateReservation updates a reservation in the database
+func (m *tesDBRepo) UpdateReservation(u models.Reservation) error {
+	return nil
+}
+
+// deletes one reservation by id
+func (m *tesDBRepo) DeleteReservation(id int) error {
+	return nil
+}
+
+// updates a processed for a reservation by id
+func (m *tesDBRepo) UpdateProcessedForReservation(id, processed int) error {
+	return nil
+}
