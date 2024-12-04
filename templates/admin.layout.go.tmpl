@@ -25,6 +25,9 @@
             label{
                 font-weight: bold;
             }
+            .notie-container{
+                z-index: 50000;
+            }
         </style>
         {{block "css" . }}
 
@@ -144,6 +147,39 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/static/js/app.js"></script>
     <script src="/static/admin/js/dashboard.js"></script>
+    <script>
+        let attention = Prompt();
+
+        function Notify(msg, msgType) {
+            notie.alert({
+            type: msgType, // optional, default = 4, enum: [1, 2, 3, 4, 5, 'success', 'warning', 'error', 'info', 'neutral']
+            text: msg,
+            // stay: Boolean, // optional, default = false
+            // time: Number, // optional, default = 3, minimum = 1,
+            // position: String // optional, default = 'top', enum: ['top', 'bottom']
+            })
+        }
+        function notifyModal(title, text, icon, confirmationButtonText) {
+            Swal.fire({
+            title: title,
+            html: text,
+            icon: icon,
+            confirmButtonText: confirmationButtonText
+            })
+        }
+
+        {{with .Error}}
+            Notify("{{.}}", "error")
+        {{end}}
+
+        {{with .Flash}}
+        Notify("{{.}}", "success")
+        {{end}}
+
+        {{with .Warning}}
+        Notify("{{.}}", "warning")
+        {{end}}
+    </script>
     <!-- End custom js for this page-->
 
     {{block "js" . }}

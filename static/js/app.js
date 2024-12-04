@@ -84,12 +84,12 @@ function Prompt() {
                     c.didOpen();
                 }
             },
-            preConfirm: () => {
-                return [
-                document.querySelector("#reservation-dates-modal #start").value,
-                document.querySelector("#reservation-dates-modal #end").value
-                ]
-            }
+            // preConfirm: () => {
+            //     return [
+            //     document.querySelector("#reservation-dates-modal #start").value,
+            //     document.querySelector("#reservation-dates-modal #end").value
+            //     ]
+            // }
         });
 
             if (result) {
