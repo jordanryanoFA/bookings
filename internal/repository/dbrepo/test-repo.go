@@ -107,3 +107,13 @@ func (m *tesDBRepo) GetRestrictionForRoomByDate(roomID int, start, end time.Time
 
 	return restrictions, nil
 }
+
+// insert a room restrictions
+func (m *tesDBRepo) InsertBlockForRoom(id int, startDate time.Time) error {
+	return nil
+}
+
+// deletes a room restrictions
+func (m *tesDBRepo) DeleteBlockByID(id int) error {
+	return nil
+}
